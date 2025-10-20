@@ -467,6 +467,54 @@ footer {
     align-items: center;
     background-color: $black;
     color: $yellow;
+    gap: $gap-max;
+
+    .shadow-pop-bl {
+      height: 50px;
+      width: 50px;
+      background-color: #f5cd13;
+      appearance: none;
+      -webkit-appearance: none;
+      border: 1px solid $blue;
+      transition: all 0.3s ease;
+
+    }
+    
+    .shadow-pop-bl:hover {
+      -webkit-animation: shadow-pop-bl 0.3s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+              animation: shadow-pop-bl 0.3s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+    }
+
+
+    @-webkit-keyframes shadow-pop-bl {
+      0% {
+        -webkit-box-shadow: 0 0 #f5cd13, 0 0 #f5cd13, 0 0 #f5cd13, 0 0 #f5cd13, 0 0 #f5cd13, 0 0 #f5cd13, 0 0 #f5cd13, 0 0 #f5cd13;
+                box-shadow: 0 0 #f5cd13, 0 0 #f5cd13, 0 0 #f5cd13, 0 0 #f5cd13, 0 0 #f5cd13, 0 0 #f5cd13, 0 0 #f5cd13, 0 0 #f5cd13;
+        -webkit-transform: translateX(0) translateY(0);
+                transform: translateX(0) translateY(0);
+      }
+      100% {
+        -webkit-box-shadow: -1px 1px #f5cd13, -2px 2px #f5cd13, -3px 3px #f5cd13, -4px 4px #f5cd13, -5px 5px #f5cd13, -6px 6px #f5cd13, -7px 7px #f5cd13, -8px 8px #f5cd13;
+                box-shadow: -1px 1px #f5cd13, -2px 2px #f5cd13, -3px 3px #f5cd13, -4px 4px #f5cd13, -5px 5px #f5cd13, -6px 6px #f5cd13, -7px 7px $blue, -8px 8px $blue;
+        -webkit-transform: translateX(8px) translateY(-8px);
+                transform: translateX(8px) translateY(-8px);
+      }
+    }
+    @keyframes shadow-pop-bl {
+      0% {
+        -webkit-box-shadow: 0 0 #f5cd13, 0 0 #f5cd13, 0 0 #f5cd13, 0 0 #f5cd13, 0 0 #f5cd13, 0 0 #f5cd13, 0 0 #f5cd13, 0 0 #f5cd13;
+                box-shadow: 0 0 #f5cd13, 0 0 #f5cd13, 0 0 #f5cd13, 0 0 #f5cd13, 0 0 #f5cd13, 0 0 #f5cd13, 0 0 #f5cd13, 0 0 #f5cd13;
+        -webkit-transform: translateX(0) translateY(0);
+                transform: translateX(0) translateY(0);
+      }
+      100% {
+        -webkit-box-shadow: -1px 1px #f5cd13, -2px 2px #f5cd13, -3px 3px #f5cd13, -4px 4px #f5cd13, -5px 5px #f5cd13, -6px 6px #f5f5f5, -7px 7px #f5f5f5, -8px 8px #f5f5f5;
+                box-shadow: -1px 1px $yellow, -2px 2px $blue, -3px 3px $yellow, -4px 4px $blue, -5px 5px $yellow;
+        -webkit-transform: translateX(8px) translateY(-8px);
+                transform: translateX(8px) translateY(-8px);
+      }
+    }
+    
 }
 
 #cookie-banner {
