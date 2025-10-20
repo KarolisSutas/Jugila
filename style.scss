@@ -474,6 +474,8 @@ footer {
       width: 50px;
       background-color: #f5cd13;
       appearance: none;
+      color: initial;
+      color: $blue;
       -webkit-appearance: none;
       border: 1px solid $blue;
       transition: all 0.3s ease;
